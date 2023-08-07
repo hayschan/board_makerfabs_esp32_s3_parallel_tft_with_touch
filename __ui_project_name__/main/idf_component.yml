@@ -1,0 +1,6 @@
+description: ESP-BSP SquareLine LVGL Example
+dependencies:
+  idf: ">=4.4"
+  makerfabs_esp32_s3_parallel_tft_with_touch_3-5inch:
+    version: "1.0"
+    override_path: "../components/makerfabs_esp32_s3_parallel_tft_with_touch_3-5inch"
