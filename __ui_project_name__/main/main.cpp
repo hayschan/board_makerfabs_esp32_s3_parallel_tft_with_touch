@@ -4,6 +4,7 @@
  * SPDX-License-Identifier: CC0-1.0
  */
 
+#include <stdio.h>
 #include "esp_log.h"
 #include "bsp/makerfabs_esp32_s3_parallel_tft_with_touch_3-5inch.h"
 #include "lvgl.h"
@@ -26,7 +27,7 @@ void app_lvgl_display(void)
     bsp_display_unlock();
 }
 
-void app_main(void)
+extern "C" void app_main(void)
 {
     /* Initialize I2C (for touch) */
     bsp_i2c_init();
