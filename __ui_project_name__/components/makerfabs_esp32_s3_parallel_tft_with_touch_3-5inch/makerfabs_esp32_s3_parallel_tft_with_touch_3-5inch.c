@@ -123,7 +123,7 @@ static lv_disp_t *bsp_display_lcd_init(void)
     const lvgl_port_display_cfg_t disp_cfg = {
         .io_handle = io_handle,
         .panel_handle = panel_handle,
-        .buffer_size = BSP_LCD_H_RES * 50,
+        .buffer_size = BSP_LCD_H_RES * 20,
         .double_buffer = true,
         .hres = BSP_LCD_H_RES,
         .vres = BSP_LCD_V_RES,
