@@ -13,7 +13,7 @@
 #include "esp_lcd_panel_vendor.h"
 #include "esp_lcd_panel_ops.h"
 
-#include "bsp/ws_7inch.h"
+#include "bsp/makerfabs_esp32_s3_parallel_tft_with_touch_3-5inch.h"
 #include "FT6X36.h"
 #include "esp_lcd_ili9488.h"
 #include "esp_lvgl_port.h"

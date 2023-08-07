@@ -5,4 +5,4 @@
  */
 
 #pragma once
-#include "bsp/ws_7inch.h"
+#include "bsp/makerfabs_esp32_s3_parallel_tft_with_touch_3-5inch.h"
