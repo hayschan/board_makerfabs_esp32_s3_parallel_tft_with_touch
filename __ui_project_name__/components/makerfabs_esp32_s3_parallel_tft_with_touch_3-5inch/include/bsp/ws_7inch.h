@@ -20,28 +20,27 @@
 
 /* Display */
 #define BSP_LCD_WIDTH   (16)
-#define BSP_LCD_DB0     (GPIO_NUM_13)
-#define BSP_LCD_DB1     (GPIO_NUM_12)
-#define BSP_LCD_DB2     (GPIO_NUM_11)
-#define BSP_LCD_DB3     (GPIO_NUM_10)
-#define BSP_LCD_DB4     (GPIO_NUM_9)
-#define BSP_LCD_DB5     (GPIO_NUM_46)
-#define BSP_LCD_DB6     (GPIO_NUM_3)
-#define BSP_LCD_DB7     (GPIO_NUM_8)
-#define BSP_LCD_DB8     (GPIO_NUM_18)
-#define BSP_LCD_DB9     (GPIO_NUM_17)
+#define BSP_LCD_DB0     (GPIO_NUM_47)
+#define BSP_LCD_DB1     (GPIO_NUM_21)
+#define BSP_LCD_DB2     (GPIO_NUM_14)
+#define BSP_LCD_DB3     (GPIO_NUM_13)
+#define BSP_LCD_DB4     (GPIO_NUM_12)
+#define BSP_LCD_DB5     (GPIO_NUM_11)
+#define BSP_LCD_DB6     (GPIO_NUM_10)
+#define BSP_LCD_DB7     (GPIO_NUM_9)
+#define BSP_LCD_DB8     (GPIO_NUM_3)
+#define BSP_LCD_DB9     (GPIO_NUM_8)
 #define BSP_LCD_DB10    (GPIO_NUM_16)
 #define BSP_LCD_DB11    (GPIO_NUM_15)
 #define BSP_LCD_DB12    (GPIO_NUM_7)
 #define BSP_LCD_DB13    (GPIO_NUM_6)
 #define BSP_LCD_DB14    (GPIO_NUM_5)
 #define BSP_LCD_DB15    (GPIO_NUM_4)
-#define BSP_LCD_CS      (GPIO_NUM_NC)
-#define BSP_LCD_DC      (GPIO_NUM_37)
-#define BSP_LCD_WR      (GPIO_NUM_38)
-#define BSP_LCD_RD      (GPIO_NUM_NC)
-#define BSP_LCD_RST     (GPIO_NUM_39)
-#define BSP_LCD_WAIT    (GPIO_NUM_1)
+#define BSP_LCD_CS      (GPIO_NUM_NC) // checked, https://github.com/Makerfabs/Makerfabs-ESP32-S3-Parallel-TFT-with-Touch/blob/main/example/touch_keyboard_v2/Parallel16_9488.h
+#define BSP_LCD_DC      (GPIO_NUM_36) // checked, https://github.com/Makerfabs/Makerfabs-ESP32-S3-Parallel-TFT-with-Touch/blob/main/example/touch_keyboard_v2/Parallel16_9488.h
+#define BSP_LCD_WR      (GPIO_NUM_35) // checked, https://github.com/Makerfabs/Makerfabs-ESP32-S3-Parallel-TFT-with-Touch/blob/main/example/touch_keyboard_v2/Parallel16_9488.h
+#define BSP_LCD_RD      (GPIO_NUM_48) // checked, https://github.com/Makerfabs/Makerfabs-ESP32-S3-Parallel-TFT-with-Touch/blob/main/example/touch_keyboard_v2/Parallel16_9488.h
+#define BSP_LCD_RST     (GPIO_NUM_NC) // checked, https://github.com/Makerfabs/Makerfabs-ESP32-S3-Parallel-TFT-with-Touch/blob/main/example/touch_keyboard_v2/Parallel16_9488.h
 #define BSP_LCD_BL      (GPIO_NUM_NC)
 #define BSP_LCD_TP_INT  (GPIO_NUM_2)
 
@@ -89,8 +88,8 @@ esp_err_t bsp_i2c_deinit(void);
  *
  * Display's backlight must be enabled explicitly by calling bsp_display_backlight_on()
  **************************************************************************************************/
-#define BSP_LCD_H_RES              (800)
-#define BSP_LCD_V_RES              (480)
+#define BSP_LCD_H_RES              (480)
+#define BSP_LCD_V_RES              (320)
 #define BSP_LCD_PIXEL_CLOCK_HZ     (20 * 1000 * 1000)
 
 /**

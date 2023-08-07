@@ -14,12 +14,12 @@
 #include "esp_lcd_panel_ops.h"
 
 #include "bsp/ws_7inch.h"
-#include "esp_lcd_ra8875.h"
-#include "esp_lcd_touch_gt911.h"
+#include "FT6X36.h"
+#include "esp_lcd_ili9488.h"
 #include "esp_lvgl_port.h"
 #include "bsp_err_check.h"
 
-static const char *TAG = "WS7INCH";
+static const char *TAG = "MAKERFABS_3-5INCH";
 
 esp_err_t bsp_i2c_init(void)
 {
@@ -44,7 +44,7 @@ esp_err_t bsp_i2c_deinit(void)
 }
 
 // Bit number used to represent command and parameter
-#define LCD_CMD_BITS           16
+#define LCD_CMD_BITS           8
 #define LCD_PARAM_BITS         8
 
 static lv_disp_t *bsp_display_lcd_init(void)
@@ -76,8 +76,6 @@ static lv_disp_t *bsp_display_lcd_init(void)
         },
         .bus_width = BSP_LCD_WIDTH,
         .max_transfer_bytes = (BSP_LCD_H_RES) * 80 * sizeof(uint16_t),
-        .psram_trans_align = 64,
-        .sram_trans_align = 4,
     };
     BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_new_i80_bus(&bus_config, &i80_bus));
 
@@ -89,9 +87,9 @@ static lv_disp_t *bsp_display_lcd_init(void)
         .trans_queue_depth = 10,
         .dc_levels = {
             .dc_idle_level = 0,
-            .dc_cmd_level = 1,
+            .dc_cmd_level = 0,
             .dc_dummy_level = 0,
-            .dc_data_level = 0,
+            .dc_data_level = 1,
         },
         .flags = {
             .swap_color_bytes = 1,
@@ -104,22 +102,20 @@ static lv_disp_t *bsp_display_lcd_init(void)
 
     ESP_LOGD(TAG, "Install LCD driver of RA8875");
     esp_lcd_panel_handle_t panel_handle = NULL;
-    const esp_lcd_panel_ra8875_config_t vendor_config = {
-        .wait_gpio_num = BSP_LCD_WAIT,
-        .lcd_width = BSP_LCD_H_RES,
-        .lcd_height = BSP_LCD_V_RES,
-        .mcu_bit_interface = BSP_LCD_WIDTH,
-    };
     esp_lcd_panel_dev_config_t panel_config = {
         .reset_gpio_num = BSP_LCD_RST,
         .color_space = ESP_LCD_COLOR_SPACE_RGB,
         .bits_per_pixel = 16,
-        .vendor_config = (void *) &vendor_config,
     };
-    BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_new_panel_ra8875(io_handle, &panel_config, &panel_handle));
+    BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_new_panel_ili9488(io_handle, &panel_config, &panel_handle));
 
     BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_panel_reset(panel_handle));
     BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_panel_init(panel_handle));
+    BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_panel_invert_color(panel_handle, true));
+    // the gap is LCD panel specific, even panels with the same driver IC, can have different gap value
+    BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_panel_set_gap(panel_handle, 0, 0));
+
+    ESP_LOGI(TAG, "Turn on LCD backlight");
     BSP_ERROR_CHECK_RETURN_NULL(esp_lcd_panel_disp_on_off(panel_handle, true));
 
     /* Add LCD screen */
