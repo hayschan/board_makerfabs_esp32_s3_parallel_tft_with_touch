@@ -2,4 +2,6 @@ description: Makerfabs
 dependencies:
   lvgl/lvgl: "^8"
   idf: ">=4.4"
-  
+
+  LovyanGFX:
+    git: https://github.com/lovyan03/LovyanGFX.git

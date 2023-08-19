@@ -12,14 +12,14 @@
     "offset_x": 0,
     "offset_y": 0,
     "rotation": 0,
-    "color_depth": "16 sw",
+    "color_depth": "16",
     "lvgl_export_path": "",
     "lvgl_include_path": "lvgl.h",
     "supported_lvgl_version": "8.2.0, 8.3.*",
     "pattern_match_files": "./CMakeLists.txt",
     "language": "C",
     "ui_export_path": "./main/ui",
-    "url": "https://github.com/espressif/esp-bsp",
-    "short_description": "The Makerfabs ESP32-S3 Parallel TFT equips with ILI9488 and FT6236 and a 3.5" display.",
-    "long_description": "The Makerfabs ESP32-S3 Parallel TFT with Touch is a 3.5" display module featuring a 320x480 TFT LCD with ILI9488 driver for smooth video playback, equipped with Wi-Fi, Bluetooth Low Energy, dual high-performance CPU cores, USB OTG interface, and touch capabilities, making it suitable for IoT applications; it also includes features like USB HID keyboard simulation."
+    "url": "https://github.com/hayschan/board_makerfabs_esp32_s3_parallel_tft_with_touch",
+    "short_description": "The Makerfabs ESP32-S3 Parallel TFT equips with ILI9488 and FT6236 and a 3.5 display.",
+    "long_description": "The Makerfabs ESP32-S3 Parallel TFT with Touch is a 3.5 display module featuring a 320x480 TFT LCD with ILI9488 driver for smooth video playback, equipped with Wi-Fi, Bluetooth Low Energy, dual high-performance CPU cores, USB OTG interface, and touch capabilities, making it suitable for IoT applications; it also includes features like USB HID keyboard simulation."
 }
