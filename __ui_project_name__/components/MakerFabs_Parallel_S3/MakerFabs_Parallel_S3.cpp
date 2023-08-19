@@ -7,8 +7,6 @@
 
 #include "esp_log.h"
 
-#include "ui/ui.h"
-
 #define TAG "Demo"
 
 // these do not have to be the same, not sure what is optimal
@@ -109,22 +107,6 @@ static void init_lvgl_lgfx()
     esp_timer_handle_t periodic_timer;
     ESP_ERROR_CHECK(esp_timer_create(&periodic_timer_args, &periodic_timer));
     ESP_ERROR_CHECK(esp_timer_start_periodic(periodic_timer, LV_TICK_PERIOD_MS * 1000));
-}
-
-extern "C" void app_main(void)
-{
-    init_lvgl_lgfx();
-
-    ESP_LOGI(TAG, "Ready to start a demo. Tap a button on screen. Reset the board with the reset button or Ctrl+T Ctrl+R to pick a new one.");
-
-    ui_init();
-
-    /* UI thread */
-    while (true)
-    {
-        lv_timer_handler(); /* let the GUI do its work */
-        vTaskDelay(pdMS_TO_TICKS(TASK_SLEEP_PERIOD_MS));
-    }
 }
 
 /*** Display callback to flush the buffer to screen ***/
