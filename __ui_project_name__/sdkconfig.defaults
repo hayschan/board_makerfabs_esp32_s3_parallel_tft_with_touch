@@ -1,7 +1,7 @@
 # This file was generated using idf.py save-defconfig. It can be edited manually.
 # Espressif IoT Development Framework (ESP-IDF) Project Minimal Configuration
 #
-CONFIG_LV_COLOR_16_SWAP=y
+CONFIG_LV_COLOR_16_SWAP=n
 CONFIG_LV_MEM_CUSTOM=y
 CONFIG_LV_MEMCPY_MEMSET_STD=y
 CONFIG_LV_USE_PERF_MONITOR=y
@@ -18,9 +18,3 @@ CONFIG_PARTITION_TABLE_MD5=y
 
 # Serial flasher config
 CONFIG_ESPTOOLPY_FLASHSIZE_8MB=y
-
-# Font
-CONFIG_LV_FONT_MONTSERRAT_18=y
-CONFIG_LV_FONT_MONTSERRAT_20=y
-CONFIG_LV_FONT_MONTSERRAT_24=y
-CONFIG_LV_FONT_MONTSERRAT_34=y

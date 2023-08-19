@@ -1,0 +1,5 @@
+description: Makerfabs
+dependencies:
+  lvgl/lvgl: "^8"
+  idf: ">=4.4"
+  

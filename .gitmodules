@@ -1,0 +1,3 @@
+[submodule "__ui_project_name__/components/LovyanGFX"]
+	path = __ui_project_name__/components/LovyanGFX
+	url = https://github.com/lovyan03/LovyanGFX.git

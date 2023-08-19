@@ -1,46 +1,32 @@
-/*
- * SPDX-FileCopyrightText: 2022 Espressif Systems (Shanghai) CO LTD
- *
- * SPDX-License-Identifier: CC0-1.0
- */
+#ifdef __cplusplus
+extern "C" {
+#endif
 
-#include <stdio.h>
 #include "esp_log.h"
-#include "bsp/makerfabs_esp32_s3_parallel_tft_with_touch_3-5inch.h"
-#include "lvgl.h"
+#include "MakerFabs_Parallel_S3.h"
 #include "ui/ui.h"
+#include "lvgl.h"
 
+#define TAG "MAKERFABS-EXAMPLE"
 
-#define TAG "ESP-EXAMPLE"
-
-/*******************************************************************************
-* Private functions
-*******************************************************************************/
-
-// *INDENT-OFF*
-void app_lvgl_display(void)
+void app_main(void)
 {
-    bsp_display_lock(0);
+    /* Initialize LovyanGFX */
+    init_lvgl_lgfx();
 
+    /* Initialize user interface */
     ui_init();
 
-    bsp_display_unlock();
+    ESP_LOGI(TAG, "SquareLine Studio example initialization done.");
+
+    /* UI thread */
+    while (true)
+    {
+        lv_timer_handler(); /* let the GUI do its work */
+        vTaskDelay(pdMS_TO_TICKS(TASK_SLEEP_PERIOD_MS));
+    }
 }
 
-extern "C" void app_main(void)
-{
-    /* Initialize I2C (for touch) */
-    bsp_i2c_init();
-
-    /* Initialize display and LVGL */
-    bsp_display_start();
-
-    /* Turn on display backlight */
-    bsp_display_backlight_on();
-
-    /* Add and show objects on display */
-    app_lvgl_display();
-
-    ESP_LOGI(TAG, "Example initialization done.");
+#ifdef __cplusplus
 }
-// *INDENT-ON*
+#endif
