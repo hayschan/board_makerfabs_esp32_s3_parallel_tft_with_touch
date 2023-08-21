@@ -3,7 +3,7 @@ extern "C" {
 #endif
 
 #include "esp_log.h"
-#include "MakerFabs_Parallel_S3.h"
+#include "MakerFabs_Parallel_S3.hpp"
 #include "ui/ui.h"
 #include "lvgl.h"
 
