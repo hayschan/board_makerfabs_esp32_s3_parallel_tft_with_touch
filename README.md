@@ -10,7 +10,9 @@ Hardware involved:
 
 Download the files from the [latest release](https://github.com/hayschan/board_makerfabs_esp32_s3_parallel_tft_with_touch/releases).
 
-Put the downloaded files into SquareLine's folder. For detailed intructions, please Refer to SquareLine Studio [OBP documentation](https://docs.squareline.io/docs/obp).
+1. Create a `Espressif/makerfabs_esp32_s3_parallel_tft_with_touch` folder in your OBP folder. For detailed intructions, please Refer to SquareLine Studio [OBP documentation](https://docs.squareline.io/docs/obp).
+2. Put the three files (`.zip`, `.slb`, `.jpg`) in the latest release inside the folder.
+3. In SquareLine Studio's File->Project settings->Board Properties->Board, set Board Group as Espressif, and choose Board as "Makerfabs ESP32-S3 Parallel TFT with Touch".
 
 ## Reference
 
