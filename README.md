@@ -33,7 +33,7 @@ SquareLine
 
 3. In SquareLine Studio's File->Project settings->Board Properties->Board, set Board Group as Espressif, and choose Board as "MakerFabs ESP32-S3 Parallel TFT with Touch".
 
-![MakerFabs TFT screenshot in SquareLine Studio](assets/Squareline-MakerFabs-TFT-screenshot.png) 
+![MakerFabs TFT screenshot in SquareLine Studio](assets/Squareline-Makerfabs-TFT-screenshot.png) 
 
 ## Disclaimer
 
