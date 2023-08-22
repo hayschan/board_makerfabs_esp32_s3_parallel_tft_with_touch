@@ -1,9 +1,13 @@
-# ESP-PROJECT-TEMPLATE
-用这个作为 ESP 相关的模板
-## c语言开发
-idf_component_register(SRCS "main.c"
-                   INCLUDE_DIRS ".")
+# SquareLine OBP for Makerfabs ESP32-S3 Parallel TFT with Touch 
 
-## c++语言开发
-idf_component_register(SRCS "main.cpp"
-                    INCLUDE_DIRS ".")
+Hardware involved:
+
+- LCD Driver: ILI9488(16bits parallel line)
+- LCD Resolution: 480 x 320
+- Touch panel controller: FT6236 Series ICs
+
+## How to use
+
+Download the files from the [latest release](https://github.com/hayschan/board_makerfabs_esp32_s3_parallel_tft_with_touch/releases).
+
+Put the downloaded files into SquareLine's folder. For detailed intructions, please Refer to SquareLine Studio [OBP documentation](https://docs.squareline.io/docs/obp).
