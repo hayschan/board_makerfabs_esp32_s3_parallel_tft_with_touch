@@ -1,4 +1,9 @@
-# SquareLine OBP for MakerFabs ESP32-S3 Parallel TFT with Touch 
+# SquareLine OBP for MakerFabs ESP32-S3 Parallel TFT with Touch
+
+The Makerfabs ESP32-S3 Parallel TFT with Touch is a 3.5 display module featuring a 320x480 TFT LCD with ILI9488 driver for smooth video playback, equipped with Wi-Fi, Bluetooth Low Energy, dual high-performance CPU cores, USB OTG interface, and touch capabilities, making it suitable for IoT applications; it also includes features like USB HID keyboard simulation.
+
+![MakerFabs TFT hardware render](assets/ESP32-S3-Parallel-TFT-with-Touch-ILI9488.jpg) 
+
 
 Hardware involved:
 
