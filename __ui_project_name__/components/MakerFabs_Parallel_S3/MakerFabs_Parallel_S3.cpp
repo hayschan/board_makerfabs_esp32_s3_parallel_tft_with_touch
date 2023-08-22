@@ -19,7 +19,7 @@
 #define LANDSCAPE // if changing this, make sure to uncheck landscape in menuconfig -> components -> lvgl -> demos -> music
 
 #if CONFIG_IDF_TARGET_ESP32S3
-  #include "LGFX_MakerFabs_Parallel_S3.hpp"
+  #include "MakerFabs_Parallel_S3.hpp"
   // if you get "will not fit, dram segment overflow" reduce this
   #ifdef LANDSCAPE
     #define LV_BUFFER_SIZE 80 /* if not double buffering, then buf will be 2x this */

@@ -3,3 +3,6 @@ targets:
     - esp32s3
 dependencies:
   idf: ">=4.4"
+  MakerFabs_Parallel_S3:
+    version: "1.0"
+    override_path: "../components/MakerFabs_Parallel_S3"
