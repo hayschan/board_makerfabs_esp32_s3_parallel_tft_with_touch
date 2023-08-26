@@ -1,4 +1,4 @@
-version: "1.0.0"
+version: "1.0.1"
 description: Board Support Package for Makerfabs Parallel TFT 3.5 inch with touch
 url: https://github.com/hayschan/board_makerfabs_esp32_s3_parallel_tft_with_touch
 

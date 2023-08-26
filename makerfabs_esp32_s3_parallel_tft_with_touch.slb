@@ -1,5 +1,5 @@
 {
-    "version": "1.0.0",
+    "version": "1.0.1",
     "group": "Espressif",
     "title": "Makerfabs ESP32-S3 Parallel TFT with Touch",
     "keywords": "Makerfabs, ILI9488, ESP32S3, FT6236",
