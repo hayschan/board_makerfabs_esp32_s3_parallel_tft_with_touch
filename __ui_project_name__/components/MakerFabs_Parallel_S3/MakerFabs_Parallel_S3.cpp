@@ -66,7 +66,7 @@ static void display_flush(lv_disp_drv_t *disp, const lv_area_t *area, lv_color_t
 static void touchpad_read(lv_indev_drv_t *indev_driver, lv_indev_data_t *data);
 static void lv_tick_task(void *arg);
 
-static void init_lvgl_lgfx()
+void init_lvgl_lgfx()
 {
     lcd.init();
     lv_init();

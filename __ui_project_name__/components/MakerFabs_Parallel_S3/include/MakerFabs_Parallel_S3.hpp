@@ -10,6 +10,7 @@
 #include <LovyanGFX.hpp>
 #include <driver/i2c.h>
 
+void init_lvgl_lgfx();
 
 class LGFX : public lgfx::LGFX_Device
 {
