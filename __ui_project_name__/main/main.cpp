@@ -1,7 +1,3 @@
-#ifdef __cplusplus
-extern "C" {
-#endif
-
 #include "esp_log.h"
 #include "MakerFabs_Parallel_S3.hpp"
 #include "ui/ui.h"
@@ -9,7 +5,7 @@ extern "C" {
 
 #define TAG "MAKERFABS-EXAMPLE"
 
-void app_main(void)
+extern "C" void app_main(void)
 {
     /* Initialize LovyanGFX */
     init_lvgl_lgfx();
@@ -23,10 +19,6 @@ void app_main(void)
     while (true)
     {
         lv_timer_handler(); /* let the GUI do its work */
-        vTaskDelay(pdMS_TO_TICKS(TASK_SLEEP_PERIOD_MS));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
 }
-
-#ifdef __cplusplus
-}
-#endif
