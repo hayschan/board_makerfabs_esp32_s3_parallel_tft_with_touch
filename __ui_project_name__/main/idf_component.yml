@@ -4,5 +4,5 @@ targets:
 dependencies:
   idf: ">=4.4"
   MakerFabs_Parallel_S3:
-    version: "1.0"
+    version: "1.0.1"
     override_path: "../components/MakerFabs_Parallel_S3"
